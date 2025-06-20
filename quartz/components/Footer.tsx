@@ -12,15 +12,15 @@ export default ((opts?: Options) => {
     const year = new Date().getFullYear()
     const links = opts?.links ?? []
     return (
-      <footer class={`${displayClass ?? ""}`}>
-        <ul>
-          {Object.entries(links).map(([text, link]) => (
-            <li>
-              <a href={link}>{text}</a>
-            </li>
-          ))}
-        </ul>
-        <p>© Модуль Роста® 2010 — 2025</p>
+      <footer class={`${displayClass ?? ""} footer-responsive`}>
+        <div class="footer-content">
+          <nav class="footer-links">
+            {Object.entries(links).map(([text, link]) => (
+              <a href={link} class="footer-link">{text}</a>
+            ))}
+          </nav>
+          <p class="footer-copyright">© Модуль Роста® 2010 — 2025</p>
+        </div>
       </footer>
     )
   }
