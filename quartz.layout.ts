@@ -2,16 +2,17 @@ import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
 // components shared across all pages
+// components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [],
   footer: Component.Footer({
     links: {
-      "Кто первый": { link: "https://thecreativeact.ru", target: "_blank" },
-      "Телеграм-канал": { link: "https://t.me/izumov", target: "_blank" },
-      "Контакт": { link: "mailto:izumov@thecreativeact.ru", target: "_blank" },
-      "Информация о сайте": { link: "https://izumov.thecreativeact.ru/Credits", target: "_blank" }
+      «Телеграм-канал»: «https://t.me/runscale»,
+      «Информация о сайте»: «/credits»,
+      «Контакт»: «mailto:izumov@thecreativeact.ru»,
+      «О Модуле Роста»: «https://kto1.io»
     },
   }),
 }
