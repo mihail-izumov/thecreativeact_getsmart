@@ -2,18 +2,25 @@ import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
 // components shared across all pages
-// components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  header: [
+    Component.Links({
+      links: {
+        "Главная": "/",
+        "Блог": "/blog",
+        "Документация": "/docs",
+      },
+    }),
+  ],
   afterBody: [],
   footer: Component.Footer({
     links: {
       "Кто первый": { link: "https://thecreativeact.ru", target: "_blank" },
       "Телеграм-канал": "https://t.me/runscale",
-  "Информация о сайте": "/credits",
-  "Контакт": "mailto:izumov@thecreativeact.ru",
-  "О Модуле Роста": "https://kto1.io"
+      "Информация о сайте": "/credits",
+      "Контакт": "mailto:izumov@thecreativeact.ru",
+      "О Модуле Роста": "https://kto1.io"
     },
   }),
 }
@@ -32,17 +39,13 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    //Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    //Component.Graph(),
     Component.DesktopOnly(Component.Explorer()),
-    //Component.DesktopOnly(Component.TableOfContents()),
-    //Component.Backlinks(),
   ],
 }
 
-// components for pages that display lists of pages  (e.g. tags or folders)
+// components for pages that display lists of pages (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
