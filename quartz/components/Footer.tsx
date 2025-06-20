@@ -20,7 +20,7 @@ export default ((opts?: Options) => {
             </li>
           ))}
         </ul>
-        <p>© 2024 Михаил Изюмов</p>
+        <p>© Модуль Роста® 2010 — 2025</p>
       </footer>
     )
   }
