@@ -8,6 +8,11 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
+      "Кто первый": { 
+        link: "https://thecreativeact.ru", 
+        target: "_blank",
+        rel: "noopener noreferrer"
+      },
       "Телеграм-канал": "https://t.me/runscale",
       "Информация о сайте": "/credits",
       "Контакт": "mailto:izumov@thecreativeact.ru",
